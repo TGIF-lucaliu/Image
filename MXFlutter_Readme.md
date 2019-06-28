@@ -112,7 +112,7 @@ class HomePage extends MXJSWidget {
 
 ## 效果
 
-![](https://github.com/langbluesky/Image/blob/master/demo.gif?raw=true)
+![](https://github.com/langbluesky/Image/blob/master/demo_0.gif?raw=true)
 在此，鸣谢Flutter版作者[HackSoul](https://github.com/HackSoul)，笔者从这里[zhihu-flutter](https://github.com/HackSoul/zhihu-flutter)借鉴的示例代码。
 
 ## 如何开始

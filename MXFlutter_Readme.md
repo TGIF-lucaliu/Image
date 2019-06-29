@@ -113,19 +113,62 @@ class HomePage extends MXJSWidget {
 ## 效果
 
 ![](https://github.com/langbluesky/Image/blob/master/demo_0.gif?raw=true)
+
 在此，鸣谢Flutter版作者[HackSoul](https://github.com/HackSoul)，笔者从这里[zhihu-flutter](https://github.com/HackSoul/zhihu-flutter)借鉴的示例代码。
 
-## 如何开始
+## 使用
 
+* 第一步: Flutter侧，创建并启动MXJSFlutterApp
 
+```
+
+MXJSFlutter.getInstance().setup();
+MXJSFlutter.getInstance().runJSApp(jsAppName: "app_test", pageName: null);
+
+```
+
+* 第二步: JS侧，编写MXJSWidget页面
+
+```
+class AppTest extends MXJSFlutterApp {
+    constructor() {
+        super("app_test", "initRouteName");
+    }
+
+    createJSWidgetWithName(pageName) {
+        let w = new JSWidgetHomePage;
+        return w;
+    }
+}
+
+function main(pageName) {
+
+    MXJSLog.log("main:pageName" + pageName);
+
+    let app = new AppTest;
+    runApp(app);
+}
+
+``` 
+
+* 第三步：Flutter侧，进入MXJSWidget页面
+
+``` 
+Navigator.push(context, MaterialPageRoute(builder: (context) => MXJSFlutter.getInstance().navigatorPushWithPageName("JSWidgetHomePage")));
+
+``` 
 
 ## 许可协议
 
-MXFlutter遵循MIT开源许可证协议。
+MXFlutter遵循[MIT](http://opensource.org/licenses/MIT)开源许可证协议。
+
+## 参与贡献
+
+如果你有好的意见或建议，欢迎给我们提 Issues 或 Pull Requests。
 
 ## QQ群
 
-对MXFlutter感兴趣的小伙伴，可以加QQ群交流，QQ群: 747535761
+对MXFlutter感兴趣的小伙伴，可以加QQ群交流，QQ群: 747535761。
 ![qrcode](https://github.com/langbluesky/Image/blob/master/qrcode.png?raw=true)
 
 

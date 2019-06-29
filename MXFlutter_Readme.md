@@ -169,6 +169,7 @@ MXFlutter遵循[MIT](http://opensource.org/licenses/MIT)开源许可证协议。
 ## QQ群
 
 对MXFlutter感兴趣的小伙伴，可以加QQ群交流，QQ群: 747535761。
+
 ![qrcode](https://github.com/langbluesky/Image/blob/master/qrcode.png?raw=true)
 
 

@@ -15,7 +15,7 @@ MXFlutter是一套基于JS的高性能Flutter动态化框架，它用极类似Da
 
 ## 示例代码
 
-```
+```JavaScript
 class HomePage extends MXJSWidget {
     constructor(){
         super("HomePage", {key: "HomePage"});
@@ -120,16 +120,14 @@ class HomePage extends MXJSWidget {
 
 * 第一步: Flutter侧，创建并启动MXJSFlutterApp
 
-```
-
+```Dart
 MXJSFlutter.getInstance().setup();
 MXJSFlutter.getInstance().runJSApp(jsAppName: "app_test", pageName: null);
-
 ```
 
 * 第二步: JS侧，编写MXJSWidget页面
 
-```
+```JavaScript
 class AppTest extends MXJSFlutterApp {
     constructor() {
         super("app_test", "initRouteName");
@@ -148,14 +146,12 @@ function main(pageName) {
     let app = new AppTest;
     runApp(app);
 }
-
 ``` 
 
 * 第三步：Flutter侧，进入MXJSWidget页面
 
-``` 
+```Dart
 Navigator.push(context, MaterialPageRoute(builder: (context) => MXJSFlutter.getInstance().navigatorPushWithPageName("JSWidgetHomePage")));
-
 ``` 
 
 ## 许可协议
